@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.TransactionFragment">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:id="@+id/bal_layout"
+                android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_32"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="@dimen/margin_8"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_8" android:layout_marginRight="@dimen/margin_8"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.0">
+            <TextView
+                    android:text="@string/total"
+                    android:textSize="@dimen/text_size_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView"/>
+            <TextView
+                    android:text="@string/balance"
+                    android:textSize="@dimen/text_size_40"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView2"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bal_layout" app:layout_constraintVertical_bias="0.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/ic_add_black_24dp" tools:layout_editor_absoluteY="650dp"
+            tools:layout_editor_absoluteX="339dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
